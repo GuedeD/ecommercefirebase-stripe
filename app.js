@@ -12,9 +12,9 @@ const Stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 app.use(express.json({ limit: "5mb" }));
 app.use(cors());
 
-// app.get("/", (req, res) => {
-//     res.send("Hello Wold");
-// });
+app.get("/", (req, res) => {
+  res.send("Hello Wold");
+});
 
 // app.post("/pay", async (req, res) => {
 //   await Stripe.charges.create({
